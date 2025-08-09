@@ -8,8 +8,51 @@
 </head>
 <body>
     <div id="app">
-        <h1>FigmaTodev 專案</h1>
-        <p>Vite + Sass + PHP + MySQL 技術棧</p>
+        <header class="app-header">
+            <div class="container">
+                <a href="#" class="logo">FigmaTodev</a>
+                <nav>
+                    <button class="btn btn--primary">開始使用</button>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="app-main">
+            <div class="container">
+                <div class="text-center mb-6">
+                    <h1>將 Figma 設計轉換為程式碼</h1>
+                    <p class="text-secondary">使用 Vite + Sass + PHP + MySQL 技術棧，快速將您的設計原型轉換為可運行的網站</p>
+                    
+                    <div class="mt-6">
+                        <button class="btn btn--primary" style="margin-right: 1rem;">立即開始</button>
+                        <button class="btn btn--secondary">了解更多</button>
+                    </div>
+                </div>
+                
+                <div class="row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                    <div class="card">
+                        <h3 class="card__title">快速開發</h3>
+                        <p class="card__text">使用現代化工具鏈，提供熱重載和即時預覽功能，大幅提升開發效率。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card__title">響應式設計</h3>
+                        <p class="card__text">自動生成適配各種設備的響應式佈局，確保在所有螢幕尺寸上都有最佳體驗。</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card__title">完整後端</h3>
+                        <p class="card__text">包含 PHP 後端 API 和 MySQL 資料庫，提供完整的全棧開發解決方案。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="app-footer">
+            <div class="container">
+                <p>&copy; 2024 FigmaTodev. 使用 Vite + Sass + PHP + MySQL 構建。</p>
+            </div>
+        </footer>
     </div>
     
     <script type="module" src="./src/js/main.js"></script>

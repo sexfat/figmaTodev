@@ -1,0 +1,201 @@
+// ==========================================
+// CARDS
+// ==========================================
+
+.card {
+  @include card;
+  
+  // Card header
+  &__header {
+    padding: $spacing-4 $spacing-6 $spacing-3;
+    border-bottom: 1px solid $gray-200;
+    margin: -$spacing-6 -$spacing-6 $spacing-4 -$spacing-6;
+  }
+  
+  // Card body
+  &__body {
+    // Default padding comes from .card base
+  }
+  
+  // Card footer
+  &__footer {
+    padding: $spacing-3 $spacing-6 $spacing-4;
+    border-top: 1px solid $gray-200;
+    margin: $spacing-4 -$spacing-6 -$spacing-6 -$spacing-6;
+    background-color: $gray-50;
+  }
+  
+  // Card title
+  &__title {
+    margin-bottom: $spacing-2;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $gray-900;
+  }
+  
+  // Card subtitle
+  &__subtitle {
+    margin-bottom: $spacing-3;
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+  
+  // Card text
+  &__text {
+    margin-bottom: $spacing-3;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Card image
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    margin: -$spacing-6 -$spacing-6 $spacing-4 -$spacing-6;
+  }
+  
+  // Card variants
+  &--elevated {
+    box-shadow: $shadow-lg;
+    border: none;
+  }
+  
+  &--outlined {
+    border: 2px solid $gray-300;
+    box-shadow: none;
+  }
+  
+  &--flush {
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+  
+  // Card states
+  &--hover {
+    @include hover-lift;
+    cursor: pointer;
+  }
+  
+  &--active {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+  }
+  
+  // Card sizes
+  &--sm {
+    padding: $spacing-4;
+    
+    .card__header {
+      padding: $spacing-3 $spacing-4 $spacing-2;
+      margin: -$spacing-4 -$spacing-4 $spacing-3 -$spacing-4;
+    }
+    
+    .card__footer {
+      padding: $spacing-2 $spacing-4 $spacing-3;
+      margin: $spacing-3 -$spacing-4 -$spacing-4 -$spacing-4;
+    }
+    
+    .card__image {
+      margin: -$spacing-4 -$spacing-4 $spacing-3 -$spacing-4;
+    }
+  }
+  
+  &--lg {
+    padding: $spacing-8;
+    
+    .card__header {
+      padding: $spacing-6 $spacing-8 $spacing-4;
+      margin: -$spacing-8 -$spacing-8 $spacing-6 -$spacing-8;
+    }
+    
+    .card__footer {
+      padding: $spacing-4 $spacing-8 $spacing-6;
+      margin: $spacing-6 -$spacing-8 -$spacing-8 -$spacing-8;
+    }
+    
+    .card__image {
+      margin: -$spacing-8 -$spacing-8 $spacing-6 -$spacing-8;
+    }
+  }
+}
+
+// Card group
+.card-group {
+  display: grid;
+  gap: $spacing-4;
+  
+  &--cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  &--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @include mobile-only {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include tablet-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mobile-only {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+    
+    @include desktop-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include tablet-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mobile-only {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Horizontal card
+.card--horizontal {
+  display: flex;
+  
+  .card__image {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: $border-radius-lg 0 0 $border-radius-lg;
+    margin: -$spacing-6 $spacing-4 -$spacing-6 -$spacing-6;
+  }
+  
+  .card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  @include mobile-only {
+    flex-direction: column;
+    
+    .card__image {
+      width: 100%;
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
+      margin: -$spacing-6 -$spacing-6 $spacing-4 -$spacing-6;
+    }
+  }
+}

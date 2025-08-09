@@ -1,0 +1,51 @@
+// ==========================================
+// DEFAULT THEME
+// ==========================================
+
+// This file can be used to override default variables for theming
+// For example, you could create a dark theme by overriding colors here
+
+:root {
+  // CSS Custom Properties for dynamic theming
+  --color-primary: #{$primary-color};
+  --color-secondary: #{$secondary-color};
+  --color-success: #{$success-color};
+  --color-warning: #{$warning-color};
+  --color-danger: #{$danger-color};
+  --color-info: #{$info-color};
+  
+  --color-white: #{$white};
+  --color-black: #{$black};
+  
+  --color-gray-100: #{$gray-100};
+  --color-gray-200: #{$gray-200};
+  --color-gray-300: #{$gray-300};
+  --color-gray-400: #{$gray-400};
+  --color-gray-500: #{$gray-500};
+  --color-gray-600: #{$gray-600};
+  --color-gray-700: #{$gray-700};
+  --color-gray-800: #{$gray-800};
+  --color-gray-900: #{$gray-900};
+  
+  --font-family-primary: #{$font-family-primary};
+  --font-family-secondary: #{$font-family-secondary};
+  --font-family-mono: #{$font-family-mono};
+  
+  --border-radius-base: #{$border-radius-base};
+  --border-radius-lg: #{$border-radius-lg};
+  
+  --spacing-xs: #{$spacing-1};
+  --spacing-sm: #{$spacing-2};
+  --spacing-md: #{$spacing-4};
+  --spacing-lg: #{$spacing-6};
+  --spacing-xl: #{$spacing-8};
+  
+  --shadow-sm: #{$shadow-sm};
+  --shadow-base: #{$shadow-base};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+}

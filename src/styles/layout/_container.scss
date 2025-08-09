@@ -1,0 +1,46 @@
+// ==========================================
+// CONTAINER
+// ==========================================
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  
+  @include tablet-up {
+    max-width: $container-md;
+  }
+  
+  @include desktop-up {
+    max-width: $container-lg;
+  }
+  
+  @include large-desktop-up {
+    max-width: $container-xl;
+  }
+  
+  @include custom-breakpoint($breakpoint-2xl) {
+    max-width: $container-2xl;
+  }
+  
+  // Container variants
+  &--fluid {
+    max-width: none;
+  }
+  
+  &--sm {
+    max-width: $container-sm;
+  }
+  
+  &--md {
+    max-width: $container-md;
+  }
+  
+  &--lg {
+    max-width: $container-lg;
+  }
+  
+  &--xl {
+    max-width: $container-xl;
+  }
+}
